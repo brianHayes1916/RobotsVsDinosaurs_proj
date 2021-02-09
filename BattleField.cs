@@ -50,14 +50,14 @@ namespace RobotsVsDinosaurs
                 Dinosaur fightingDino = herd.dinosaurs[0];
                 Robot fightingRobo = fleet.robots[0];
                 fightingDino.AttackAtempt(fightingRobo);
-                if(fightingRobo.health <= 0)
+                if(fightingRobo.health <= 0 || fightingRobo.powerLevel <= 0)
                 {
                     Console.WriteLine($"The robot know as {fightingRobo.name} has died!");
                     fleet.robots.RemoveAt(0);
                     continue;
                 }
                 fightingRobo.AttackAtempt(fightingDino);
-                if (fightingDino.health <= 0)
+                if (fightingDino.health <= 0 || fightingDino.energy <= 0)
                 {
                     Console.WriteLine($"The dinosaur know as {fightingDino.dinoType} has died!");
                     herd.dinosaurs.RemoveAt(0);
@@ -81,14 +81,14 @@ namespace RobotsVsDinosaurs
                 Dinosaur fightingDino = herd.dinosaurs[0];
                 Robot fightingRobo = fleet.robots[0];
                 fightingRobo.AttackAtempt(fightingDino);
-                if (fightingDino.health <= 0)
+                if (fightingDino.health <= 0 || fightingDino.energy <= 0)
                 {
                     Console.WriteLine($"The dinosaur know as {fightingDino.dinoType} has died!");
                     herd.dinosaurs.RemoveAt(0);
                     continue;
                 }
                 fightingDino.AttackAtempt(fightingRobo);
-                if (fightingRobo.health <= 0)
+                if (fightingRobo.health <= 0 || fightingRobo.powerLevel <= 0)
                 {
                     Console.WriteLine($"The robot know as {fightingRobo.name} has died!");
                     fleet.robots.RemoveAt(0);

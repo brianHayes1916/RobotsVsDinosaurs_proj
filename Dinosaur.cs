@@ -27,6 +27,7 @@ namespace RobotsVsDinosaurs
 
         public void AttackAtempt(Robot robot)
         {
+            energy -= 10;
             int atempt = attackChance.Next(1, 3);
             if(atempt == 2)
             {
