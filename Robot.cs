@@ -12,7 +12,6 @@ namespace RobotsVsDinosaurs
         public double health;
         public double powerLevel;
         public Weapon weapon;
-        public double attackPower;
 
         // constructor
 
@@ -21,11 +20,15 @@ namespace RobotsVsDinosaurs
             this.name = name;
             this.health = health;
             this.powerLevel = powerLevel;
-            this.attackPower = attackPower;
             weapon = new Weapon();
         }
 
-
+        //is it ok to change the origonal value of things like health
+        //should this to go in the battlefield
+        public void RoboAttack(Dinosaur dino)
+        {
+            dino.health -= weapon.attackPower;
+        }
 
     }
 }

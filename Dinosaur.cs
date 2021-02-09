@@ -23,6 +23,11 @@ namespace RobotsVsDinosaurs
             this.attackPower = attackPower;
         }
 
+        //why was this so easy it's two steps should i make multiple variables
+        public void DinoAttack(Robot robot)
+        {
+            robot.health -= attackPower;
+        }
 
     }
 }

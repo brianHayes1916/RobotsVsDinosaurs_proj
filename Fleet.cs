@@ -8,14 +8,20 @@ namespace RobotsVsDinosaurs
 {
     class Fleet
     {
-        List<Robot> robots;
+        public List<Robot> robots;
 
 
         // Constructor
         
         public Fleet()
         {
-            List<Robot> robots = new List<Robot>();
+            robots = new List<Robot>();
+            Robot robot1 = new Robot("Robot SR.", 100, 100, 10);
+            Robot robot2 = new Robot("Robot Jr.", 100, 100, 10);
+            Robot robot3 = new Robot("Robot The III", 100, 100, 10);
+            AddRobotToFleet(robot1);
+            AddRobotToFleet(robot2);
+            AddRobotToFleet(robot3);
         }
 
         public void AddRobotToFleet(Robot robot)

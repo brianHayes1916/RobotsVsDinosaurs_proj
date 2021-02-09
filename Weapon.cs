@@ -8,5 +8,11 @@ namespace RobotsVsDinosaurs
 {
     class Weapon
     {
+       public double attackPower;
+
+        public Weapon()
+        {
+            attackPower = 10;
+        }
     }
 }
