@@ -11,7 +11,7 @@ namespace RobotsVsDinosaurs
         static void Main(string[] args)
         {
             BattleField battleField = new BattleField();
-
+            battleField.WhoFirst();
             
 
            

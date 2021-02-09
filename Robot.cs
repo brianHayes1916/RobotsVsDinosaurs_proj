@@ -12,6 +12,7 @@ namespace RobotsVsDinosaurs
         public double health;
         public double powerLevel;
         public Weapon weapon;
+        public Random attackChance;
 
         // constructor
 
@@ -21,10 +22,23 @@ namespace RobotsVsDinosaurs
             this.health = health;
             this.powerLevel = powerLevel;
             weapon = new Weapon();
+            attackChance = new Random();
         }
 
-        //is it ok to change the origonal value of things like health
-        //should this to go in the battlefield
+        public void AttackAtempt(Dinosaur dino)
+        {
+            int atempt = attackChance.Next(1, 3);
+            if(atempt == 2)
+            {
+                Console.WriteLine("The Robots attack hits!");
+                RoboAttack(dino);
+            }
+            else
+            {
+                Console.WriteLine("The Robot's attack missed!");
+            }
+        }
+
         public void RoboAttack(Dinosaur dino)
         {
             dino.health -= weapon.attackPower;
